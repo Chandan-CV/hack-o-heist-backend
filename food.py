@@ -1,7 +1,7 @@
 import psycopg2
 from flask import Flask, jsonify, request
 
-conn = psycopg2.connect(database="hackathon", user='postgres', password='Welcome1', host='database-1.ce9vh9gmxb9m.ap-south-1.rds.amazonaws.com', port= '5432')
+conn = psycopg2.connect(database="dccvhrhdhdemh6", user='schfljfffwlbft', password='768b83bf3aa28222ec0afc2ac937282e9976669aec1305c73b7666ec14a0c16f', host='ec2-54-76-43-89.eu-west-1.compute.amazonaws.com', port= '5432')
 cursor = conn.cursor()
 #establishing the database connection
 data = cursor.execute("select version()")
