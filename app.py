@@ -1,12 +1,12 @@
 import psycopg2
 from flask import Flask, jsonify, request
 
-conn = psycopg2.connect(database="dccvhrhdhdemh6", user='schfljfffwlbft', password='768b83bf3aa28222ec0afc2ac937282e9976669aec1305c73b7666ec14a0c16f', host='ec2-54-76-43-89.eu-west-1.compute.amazonaws.com', port= '5432')
-cursor = conn.cursor()
+# conn = psycopg2.connect(database="dccvhrhdhdemh6", user='schfljfffwlbft', password='768b83bf3aa28222ec0afc2ac937282e9976669aec1305c73b7666ec14a0c16f', host='ec2-54-76-43-89.eu-west-1.compute.amazonaws.com', port= '5432')
+# cursor = conn.cursor()
 #establishing the database connection
-data = cursor.execute("select version()")
-data = cursor.fetchone()
-print("Connection established to: ", data)
+# data = cursor.execute("select version()")
+# data = cursor.fetchone()
+# print("Connection established to: ", data)
 
 def setup():
     # cursor.execute("DROP TABLE IF EXISTS food")
@@ -23,7 +23,7 @@ def setup():
     )
     conn.commit()
 
-setup()
+# setup()
 
 
 
@@ -55,8 +55,8 @@ app = Flask(__name__)
 @app.route('/', methods = ['GET', 'POST'])
 def home():
     if(request.method == 'GET'):
-        data =  get_all()
-        return jsonify({'data': data})
+#         data =  get_all()
+        return jsonify({'data': "lmaoo"})
   
   
 # A simple function to calculate the square of a number
